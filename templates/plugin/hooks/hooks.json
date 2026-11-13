@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "./scripts/permission-hook.sh",
+        "matcher": "Shell|Read|Write"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": "./scripts/permission-hook.sh",
+        "matcher": "explore|shell"
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": "${CURSOR_PLUGIN_ROOT}/scripts/observe-hook.sh",
+        "loop_limit": 5
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "./scripts/permission-hook.sh",
+        "type": "command",
+        "timeout": 30,
+        "failClosed": false,
+        "matcher": "rm|curl|wget"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "./scripts/permission-hook.sh",
+        "failClosed": false
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": "./scripts/permission-hook.sh",
+        "failClosed": false
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "./scripts/before-submit-prompt-hook.sh"
+      }
+    ],
+    "preCompact": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "stop": [
+      {
+        "command": "${CURSOR_PLUGIN_ROOT}/scripts/observe-hook.sh",
+        "type": "command",
+        "timeout": 30,
+        "loop_limit": 5,
+        "failClosed": false
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "afterAgentThought": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "beforeTabFileRead": [
+      {
+        "command": "./scripts/permission-hook.sh"
+      }
+    ],
+    "afterTabFileEdit": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ],
+    "workspaceOpen": [
+      {
+        "command": "./scripts/observe-hook.sh"
+      }
+    ]
+  }
+}

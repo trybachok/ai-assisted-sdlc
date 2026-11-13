@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "${POSTGRES_URL}",
+        "MAX_RESULTS": "${MAX_RESULTS}",
+        "ALLOWED_PROJECTS": "${ALLOWED_PROJECTS}"
+      },
+      "envFile": ".env",
+      "cwd": "${CURSOR_PLUGIN_ROOT}"
+    },
+    "example-api": {
+      "url": "https://mcp.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${API_TOKEN}",
+        "X-Api-Region": "${API_REGION}",
+        "X-Api-Version": "${API_VERSION}"
+      }
+    },
+    "example-oauth": {
+      "url": "https://api.example.com/mcp",
+      "auth": {
+        "CLIENT_ID": "${env:MCP_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:MCP_CLIENT_SECRET}",
+        "scopes": ["read", "write"]
+      }
+    }
+  }
+}

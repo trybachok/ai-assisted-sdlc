@@ -27,6 +27,9 @@
 - Промпты
   - [простая задача](prompts/simple-task.md)
 - Ревью кода
-  - [настройка Copilot](code-review/copilot-github-ruleset.md)
+  - [настройка Copilot](docs/copilot-github-ruleset.md)
+- Плагины Cursor
+  - [как создать плагин по шаблону](docs/cursor-plugin.md)
+  - [шаблон плагина](templates/plugin/README.md)
 - Готовые решения
   - [spec-kit](examples/spec-kit.md)

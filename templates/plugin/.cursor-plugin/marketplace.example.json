@@ -1,0 +1,48 @@
+{
+  "name": "my-marketplace",
+  "owner": {
+    "name": "Ваша Организация",
+    "email": "plugins@example.com"
+  },
+  "metadata": {
+    "description": "Набор плагинов для инструментов разработки",
+    "version": "1.0.0",
+    "pluginRoot": "plugins"
+  },
+  "plugins": [
+    {
+      "name": "my-plugin",
+      "source": "my-plugin",
+      "description": "Краткое описание того, что делает плагин",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ваше Имя",
+        "email": "you@example.com"
+      },
+      "homepage": "https://example.com/my-plugin",
+      "repository": "https://github.com/your-org/my-plugin",
+      "license": "MIT",
+      "keywords": ["cursor", "plugin", "template"],
+      "logo": "assets/logo.svg",
+      "category": "developer-tools",
+      "tags": ["code-review", "security"],
+      "skills": "./skills/",
+      "rules": "./rules/",
+      "agents": "./agents/",
+      "commands": "./commands/",
+      "hooks": "./hooks/hooks.json",
+      "mcpServers": "./mcp.json",
+      "variables": {
+        "type": "object",
+        "properties": {
+          "API_TOKEN": {
+            "type": "string",
+            "title": "API-токен",
+            "description": "Bearer-токен для HTTP MCP-сервера example-api"
+          }
+        },
+        "required": ["API_TOKEN"]
+      }
+    }
+  ]
+}

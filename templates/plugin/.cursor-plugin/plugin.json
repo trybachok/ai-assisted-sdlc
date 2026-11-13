@@ -1,0 +1,69 @@
+{
+  "name": "my-plugin",
+  "description": "Краткое описание того, что делает плагин",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ваше Имя",
+    "email": "you@example.com"
+  },
+  "homepage": "https://example.com/my-plugin",
+  "repository": "https://github.com/your-org/my-plugin",
+  "license": "MIT",
+  "keywords": ["cursor", "plugin", "template"],
+  "logo": "assets/logo.svg",
+  "rules": "./rules/",
+  "agents": "./agents/",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "API_TOKEN": {
+        "type": "string",
+        "title": "API-токен",
+        "description": "Bearer-токен для HTTP MCP-сервера example-api",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "POSTGRES_URL": {
+        "type": "string",
+        "title": "Строка подключения к PostgreSQL",
+        "description": "Например: postgresql://user:password@host:5432/dbname"
+      },
+      "API_REGION": {
+        "type": "string",
+        "title": "Регион API",
+        "description": "Регион, в который MCP-сервер отправляет запросы",
+        "enum": ["eu", "us"],
+        "default": "eu"
+      },
+      "API_VERSION": {
+        "type": "string",
+        "title": "Версия API",
+        "description": "Фиксированная версия API, с которой совместим плагин",
+        "const": "v1",
+        "default": "v1"
+      },
+      "MAX_RESULTS": {
+        "type": "integer",
+        "title": "Максимум результатов",
+        "description": "Сколько строк MCP-сервер возвращает за один запрос",
+        "default": 50,
+        "minimum": 1,
+        "maximum": 500
+      },
+      "ALLOWED_PROJECTS": {
+        "type": "array",
+        "title": "Разрешённые проекты",
+        "description": "Список проектов, с которыми MCP-серверу разрешено работать",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      }
+    },
+    "required": ["API_TOKEN", "POSTGRES_URL"]
+  }
+}
