@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeTabFileRead": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh"
+      }
+    ],
+    "afterTabFileEdit": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ]
+  }
+}

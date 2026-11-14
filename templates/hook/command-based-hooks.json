@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "type": "command",
+        "timeout": 30,
+        "matcher": "curl|wget",
+        "failClosed": false
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/stop-hook.sh",
+        "loop_limit": 5
+      }
+    ]
+  }
+}

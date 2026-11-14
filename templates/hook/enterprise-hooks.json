@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "./hooks/permission-hook.sh",
+        "timeout": 30,
+        "failClosed": true
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "./hooks/permission-hook.sh",
+        "timeout": 30,
+        "failClosed": true
+      }
+    ]
+  }
+}

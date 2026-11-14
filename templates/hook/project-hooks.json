@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "matcher": "rm -rf|git push"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ]
+  }
+}

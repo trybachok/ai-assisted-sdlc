@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": ".cursor/hooks/session-start-hook.sh"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "matcher": "Shell|Write|Delete"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "matcher": "generalPurpose|explore"
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": ".cursor/hooks/stop-hook.sh",
+        "loop_limit": 5
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "matcher": "rm -rf|git push"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh",
+        "failClosed": false
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": ".cursor/hooks/permission-hook.sh"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": ".cursor/hooks/before-submit-prompt-hook.sh"
+      }
+    ],
+    "preCompact": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/stop-hook.sh",
+        "loop_limit": 5
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ],
+    "afterAgentThought": [
+      {
+        "command": ".cursor/hooks/observe-hook.sh"
+      }
+    ]
+  }
+}

@@ -42,6 +42,16 @@
     - [Read-only subagent](prompts/create-subagent-readonly.md)
     - [Background subagent](prompts/create-subagent-background.md)
     - [Cloud subagent](prompts/create-subagent-cloud.md)
+  - создание Cursor Hook — отдельный промпт для каждого типа хука:
+    - [Project hooks](prompts/create-hook-project.md)
+    - [User hooks](prompts/create-hook-user.md)
+    - [Team hooks](prompts/create-hook-team.md)
+    - [Enterprise hooks](prompts/create-hook-enterprise.md)
+    - [Command-based hooks](prompts/create-hook-command-based.md)
+    - [Prompt-based hooks](prompts/create-hook-prompt-based.md)
+    - [Agent hooks](prompts/create-hook-agent.md)
+    - [Tab hooks](prompts/create-hook-tab.md)
+    - [App lifecycle hooks](prompts/create-hook-app-lifecycle.md)
 - Ревью кода
   - [настройка Copilot](docs/copilot-github-ruleset.md)
 - Плагины Cursor
@@ -67,5 +77,24 @@
     - [Read-only subagent](templates/subagent/readonly-subagent.md) — проверяет и ничего не изменяет
     - [Background subagent](templates/subagent/background-subagent.md) — работает в фоне
     - [Cloud subagent](templates/subagent/cloud-subagent.md) — задача для запуска в облаке
+- Хуки Cursor
+  - [как создавать и использовать хуки](docs/cursor-hooks.md)
+  - [шаблоны хуков](templates/hook/README.md):
+    - [Project hooks](templates/hook/project-hooks.json) ([пояснения](templates/hook/project-hooks.annotated.jsonc)) — хуки одного проекта, общие для команды
+    - [User hooks](templates/hook/user-hooks.json) ([пояснения](templates/hook/user-hooks.annotated.jsonc)) — личные хуки во всех проектах
+    - [Team hooks](templates/hook/team-hooks.md) — хук для всей команды, настраивается в дашборде
+    - [Enterprise hooks](templates/hook/enterprise-hooks.json) ([пояснения](templates/hook/enterprise-hooks.annotated.jsonc)) — хуки организации
+    - [Command-based hooks](templates/hook/command-based-hooks.json) ([пояснения](templates/hook/command-based-hooks.annotated.jsonc)) — хук запускает скрипт
+    - [Prompt-based hooks](templates/hook/prompt-based-hooks.json) ([пояснения](templates/hook/prompt-based-hooks.annotated.jsonc)) — условие проверяет AI-модель
+    - [Agent hooks](templates/hook/agent-hooks.json) ([пояснения](templates/hook/agent-hooks.annotated.jsonc)) — события агента в чате
+    - [Tab hooks](templates/hook/tab-hooks.json) ([пояснения](templates/hook/tab-hooks.annotated.jsonc)) — события автодополнения Tab
+    - [App lifecycle hooks](templates/hook/app-lifecycle-hooks.json) ([пояснения](templates/hook/app-lifecycle-hooks.annotated.jsonc)) — Cursor открыл проект
+  - скрипты-заготовки для хуков:
+    - [permission-hook.sh](templates/hook/hooks/permission-hook.sh) — разрешить или запретить действие
+    - [observe-hook.sh](templates/hook/hooks/observe-hook.sh) — наблюдать за событием
+    - [before-submit-prompt-hook.sh](templates/hook/hooks/before-submit-prompt-hook.sh) — проверить запрос перед отправкой
+    - [stop-hook.sh](templates/hook/hooks/stop-hook.sh) — продолжить работу агента
+    - [session-start-hook.sh](templates/hook/hooks/session-start-hook.sh) — добавить сведения в новый чат
+    - [workspace-open-hook.sh](templates/hook/hooks/workspace-open-hook.sh) — подключить плагины при открытии проекта
 - Готовые решения
   - [spec-kit](examples/spec-kit.md)
