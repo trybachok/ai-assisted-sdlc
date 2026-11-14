@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  >3>B8? ?;038=0 (=5>1O70B5;L=K9 D09;). 0<5=8B5 =0 A2>9.
-  0 =53> AAK;05BAO ?>;5 "logo" 2 .cursor-plugin/plugin.json ("assets/logo.svg").
-  $09; 4>;65= 1KBL 70:><<8G5= 2 @5?>78B>@89: >B=>A8B5;L=K9 ?CBL ?@52@0I05BAO
-  2 AAK;:C raw.githubusercontent.com ?> @5?>78B>@8N 8 SHA :><<8B0.
+  Логотип плагина (необязательный файл). Замените на свой.
+  На него ссылается поле "logo" в .cursor-plugin/plugin.json ("assets/logo.svg").
+  Файл должен быть закоммичен в репозиторий: относительный путь превращается
+  в ссылку raw.githubusercontent.com по репозиторию и SHA коммита.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label=">3>B8? ?;038=0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Логотип плагина">
   <rect width="128" height="128" rx="24" fill="#1f2937"/>
   <path d="M40 44 L24 64 L40 84" fill="none" stroke="#f9fafb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M88 44 L104 64 L88 84" fill="none" stroke="#f9fafb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
