@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "personal-local-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${userHome}/mcp-servers/my-server/index.js"
+      ],
+      "env": {
+        "API_KEY": "${env:API_KEY}"
+      }
+    },
+    "personal-remote-server": {
+      "url": "https://mcp.example.com/mcp"
+    }
+  }
+}

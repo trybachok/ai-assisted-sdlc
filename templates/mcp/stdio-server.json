@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "local-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "[имя пакета сервера]"
+      ],
+      "env": {
+        "API_KEY": "${env:API_KEY}"
+      },
+      "envFile": "${workspaceFolder}/.env"
+    }
+  }
+}

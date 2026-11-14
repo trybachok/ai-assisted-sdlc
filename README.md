@@ -52,6 +52,14 @@
     - [Agent hooks](prompts/create-hook-agent.md)
     - [Tab hooks](prompts/create-hook-tab.md)
     - [App lifecycle hooks](prompts/create-hook-app-lifecycle.md)
+  - создание конфигурации Cursor MCP — отдельный промпт для каждого типа подключения:
+    - [stdio server](prompts/create-mcp-stdio.md)
+    - [SSE server](prompts/create-mcp-sse.md)
+    - [Streamable HTTP server](prompts/create-mcp-streamable-http.md)
+    - [Remote server with Static OAuth](prompts/create-mcp-static-oauth.md)
+    - [Project Configuration](prompts/create-mcp-project.md)
+    - [Global Configuration](prompts/create-mcp-global.md)
+    - [Team MCP server](prompts/create-mcp-team.md)
 - Ревью кода
   - [настройка Copilot](docs/copilot-github-ruleset.md)
 - Плагины Cursor
@@ -96,5 +104,15 @@
     - [stop-hook.sh](templates/hook/hooks/stop-hook.sh) — продолжить работу агента
     - [session-start-hook.sh](templates/hook/hooks/session-start-hook.sh) — добавить сведения в новый чат
     - [workspace-open-hook.sh](templates/hook/hooks/workspace-open-hook.sh) — подключить плагины при открытии проекта
+- MCP в Cursor
+  - [как подключать и использовать MCP](docs/cursor-mcp.md)
+  - [шаблоны MCP](templates/mcp/README.md):
+    - [stdio server](templates/mcp/stdio-server.json) ([пояснения](templates/mcp/stdio-server.annotated.jsonc)) — локальный сервер: программа на вашем компьютере
+    - [SSE server](templates/mcp/sse-server.json) ([пояснения](templates/mcp/sse-server.annotated.jsonc)) — удалённый сервер с адресом для SSE
+    - [Streamable HTTP server](templates/mcp/streamable-http-server.json) ([пояснения](templates/mcp/streamable-http-server.annotated.jsonc)) — удалённый сервер с адресом для HTTP
+    - [Remote server with Static OAuth](templates/mcp/static-oauth-server.json) ([пояснения](templates/mcp/static-oauth-server.annotated.jsonc)) — удалённый сервер с заранее выданным Client ID
+    - [Project Configuration](templates/mcp/project-mcp.json) ([пояснения](templates/mcp/project-mcp.annotated.jsonc)) — серверы одного проекта, общие для команды
+    - [Global Configuration](templates/mcp/global-mcp.json) ([пояснения](templates/mcp/global-mcp.annotated.jsonc)) — личные серверы во всех проектах
+    - [Team MCP server](templates/mcp/team-mcp.md) — сервер для всей команды, настраивается в дашборде
 - Готовые решения
   - [spec-kit](examples/spec-kit.md)
