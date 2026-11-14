@@ -36,6 +36,12 @@
     - [AGENTS.md](prompts/create-rule-agents-md.md)
     - [User Rule](prompts/create-rule-user.md)
     - [Team Rule](prompts/create-rule-team.md)
+  - создание Cursor Subagent — отдельный промпт для каждого типа субагента:
+    - [Project subagent](prompts/create-subagent-project.md)
+    - [User subagent](prompts/create-subagent-user.md)
+    - [Read-only subagent](prompts/create-subagent-readonly.md)
+    - [Background subagent](prompts/create-subagent-background.md)
+    - [Cloud subagent](prompts/create-subagent-cloud.md)
 - Ревью кода
   - [настройка Copilot](docs/copilot-github-ruleset.md)
 - Плагины Cursor
@@ -53,5 +59,13 @@
     - [AGENTS.md](templates/rule/AGENTS.template.md) — простые указания для проекта
     - [User Rule](templates/rule/user-rule.md) — личное правило для всех проектов
     - [Team Rule](templates/rule/team-rule.md) — правило для всей команды
+- Субагенты Cursor
+  - [как создавать и использовать субагентов](docs/cursor-subagents.md)
+  - [шаблоны субагентов](templates/subagent/README.md):
+    - [Project subagent](templates/subagent/project-subagent.md) — помощник одного проекта, общий для команды
+    - [User subagent](templates/subagent/user-subagent.md) — личный помощник во всех проектах
+    - [Read-only subagent](templates/subagent/readonly-subagent.md) — проверяет и ничего не изменяет
+    - [Background subagent](templates/subagent/background-subagent.md) — работает в фоне
+    - [Cloud subagent](templates/subagent/cloud-subagent.md) — задача для запуска в облаке
 - Готовые решения
   - [spec-kit](examples/spec-kit.md)
