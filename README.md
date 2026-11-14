@@ -31,5 +31,7 @@
 - Плагины Cursor
   - [как создать плагин по шаблону](docs/cursor-plugin.md)
   - [шаблон плагина](templates/plugin/README.md)
+- Навыки Cursor
+  - [шаблон навыка](templates/skill/README.md)
 - Готовые решения
   - [spec-kit](examples/spec-kit.md)
