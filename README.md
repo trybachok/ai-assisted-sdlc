@@ -27,6 +27,7 @@
 - Промпты
   - [простая задача](prompts/simple-task.md)
   - [создание Cursor Skill](prompts/create-skill.md)
+  - [создание Cursor Plugin](prompts/create-plugin.md)
 - Ревью кода
   - [настройка Copilot](docs/copilot-github-ruleset.md)
 - Плагины Cursor
